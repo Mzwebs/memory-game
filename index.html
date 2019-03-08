@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logoo.png">
+    
+    <title>Le Jeu De Memoire</title>
+  </head>
+  <body>
+    <!-- OVERLAY -->
+    <section class="overlay" id="overlay"></section>
+    <!-- START GAME POPUP -->
+    <section class="start-game-popup" id="start-game-popup">
+      <h3>Le Jeu De Memoire</h3>
+<br><br><br><br>
+      <h2>Bienvenue!</h2>
+      <button id="start-game-btn"><img src="images/icons/play-button.png"> </button>
+      <br><br>
+      <h1>Tappez pour jouer!</h1>
+      <br><br>
+
+      <button id="end-game-btn"><img src="images/icons/cross-circular-button.png"> </button>
+      <br><br>
+      <h4>Fermer</h4>
+    </section>
+    <!-- WIN POPUP -->
+    <section class="win-popup hidden" id="win-popup">
+      <h2>Tu as Gagné!</h2>
+      <p id="info-game"></p>
+      <p id="timer-game"></p>
+      <button id="reload">HOME</button>
+    </section>
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+      <h1>Le Jeu De Memoire</h1>
+    </header>
+    <!-- SECTION: INFOS -->
+    
+    <!-- MAIN GRID -->
+    <main class="main-grid" id="grid">
+      <!-- Card 01 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 02 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 03 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 04 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 05 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 06 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 07 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 08 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 09 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 10 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 11 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 12 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 13 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 14 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 15 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+      <!-- Card 16 -->
+      <article class="cards">
+        <div class="card-back"></div>
+        <div class="card-front"></div>
+      </article>
+    </main>
+
+    <section class="infos">
+      <!-- user play infos -->
+      <div class="user-play-infos">
+        <!-- Stars -->
+        <div class="stars" id="stars">
+          <i class="fas fa-heart"></i>
+          <p id="visual-stars">3</p>
+        </div>
+        <!-- Moves -->
+        <div class="moves" id="moves">
+          <i class="fas fa-hashtag"></i>
+          <p id="visual-moves">0</p>
+        </div>
+        <!-- Timer -->
+        <div class="timer">
+          <p id="visual-timer">0 : 0</p>
+        </div>
+      </div>
+      <!-- Reset -->
+      <div class="reset">
+        <button id="reset"><img src="images/icons/replay.png"></button>
+      </div>
+      
+    </section>
+
+    
+    
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

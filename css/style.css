@@ -1,0 +1,339 @@
+/* BASIC STYLING */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #292824;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ANIMATIONS */
+/* ------------------------ */
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(90deg); }
+}
+
+@keyframes win {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.8; border: 3px solid #94b455; border-radius: 3px; }
+}
+
+/* OVERLAY */
+/* ------------------------ */
+.overlay {
+  background: #292824;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+/* START GAME POPUP */
+/* ------------------------ */
+.start-game-popup,
+.win-popup {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+   /* Center and scale the image nicely */
+   background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  border-radius: 10px;
+  padding: 15px 8px 8px 8px;
+  background: linear-gradient(to bottom right, #650e88, #f01daa);
+  box-shadow: 0 0 30px #231f1c;
+  color: #292824;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+.win-popup h2{
+color:white;
+font-size: 30px;
+}
+
+.start-game-popup button,
+.win-popup button {
+  margin-top: 10%;
+  padding: 10px 20px;
+  
+  border-radius: 10px;
+  
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px #231f1c;
+}
+
+.start-game-popup img{
+  
+  width: 80px;
+  height: 80px;
+}
+
+#end-game-btn img{
+  width: 40px;
+  height: 40px;
+}
+
+.start-game-popup h4 {
+ color: white;
+ font-size: 20px;
+ 
+}
+
+#reset img{
+  width: 30px;
+  height: 30px;
+}
+.start-game-popup h3 {
+  color: white;
+  font-size: 18px;
+}
+.start-game-popup h2 {
+  margin-top: 40px;
+  color: white;
+  font-size: 40px;
+}
+
+.start-game-popup h1 {
+  color: white;
+  font-size: 30px;
+}
+
+
+.start-game-popup button:hover,
+.win-popup button:hover {
+  cursor: pointer;
+  background: #4e4c44;
+}
+
+/* WIN POPUP */
+/* ------------------------ */
+.win-popup {
+  height: 185px;
+}
+
+/* MAIN HEADER */
+/* ------------------------ */
+.main-header {
+  padding: 20px 0 10px 0;
+}
+
+.main-header h1 {
+  text-align: center;
+  color: #bea77e;
+  text-transform: uppercase;
+}
+
+/* INFOS */
+/* ------------------------ */
+.infos {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-play-infos {
+  display: flex;
+}
+
+.user-play-infos > div,
+#reset {
+  margin: 0 5px;
+  padding: 3px 10px;
+  background: #1b1a18;
+  border: 2px solid #938884;
+  border-radius: 20px;
+  color: #938884;
+  text-transform: uppercase;
+}
+
+#reset:hover {
+  cursor: pointer;
+  background: #3b3935;
+}
+
+.stars,
+.moves {
+  display: flex;
+}
+
+.fa-heart,
+.fa-hashtag {
+  margin: 0 5px;
+}
+
+/* MAIN GRID */
+/* ------------------------ */
+.main-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.cards:hover {
+  cursor: pointer;
+}
+
+.card-back-flip {
+  animation: flip 0.1s ease-in forwards;
+}
+
+.card-front-flip {
+  animation: flip 0.1s 0.1s ease-out forwards reverse;
+}
+
+.card-back-reverse {
+  animation: flip 0.1s ease-in forwards reverse;
+}
+
+.card-front-reverse {
+  animation: flip 0.1s 0.1s ease-out forwards;
+}
+
+.card-win {
+  animation: win ease 0.5s forwards;
+}
+
+.card-front {
+  background: #d7be6a;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(90deg);
+  border: 2px solid #7a737a;
+}
+
+.card-back {
+  background: #de5d19;
+  background: linear-gradient(to bottom right, #650e88, #f01daa);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #7a737a;
+  border-radius: 3px;
+}
+
+#a1 > .card-front,
+#a2 > .card-front {
+  background-image: url("../images/a-bread.svg");
+}
+
+#b1 > .card-front,
+#b2 > .card-front {
+  background-image: url("../images/b-hot-tea.svg");
+}
+
+#c1 > .card-front,
+#c2 > .card-front {
+  background-image: url("../images/c-hamburger.svg");
+}
+
+#d1 > .card-front,
+#d2 > .card-front {
+  background-image: url("../images/d-french-fries.svg");
+}
+
+#e1 > .card-front,
+#e2 > .card-front {
+  background-image: url("../images/e-chocolate.svg");
+}
+
+#f1 > .card-front,
+#f2 > .card-front {
+  background-image: url("../images/f-biscuit.svg");
+}
+
+#g1 > .card-front,
+#g2 > .card-front {
+  background-image: url("../images/g-pie.svg");
+}
+
+#h1 > .card-front,
+#h2 > .card-front {
+  background-image: url("../images/h-cake.svg");
+}
+
+/* MIN 480 PX */
+/* ------------------------ */
+@media screen and (min-width: 480px) {
+  /* Main Grid */
+  .main-grid {
+    width: 440px;
+    height: 440px;
+  }
+
+  .cards {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* MIN 760 PX */
+/* ------------------------ */
+@media screen and (min-width: 760px) {
+  /* Main Grid */
+  .main-grid {
+    width: 720px;
+    height: 720px;
+    padding: 20px;
+  }
+
+  .cards {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+/* MIN 1024 PX */
+/* ------------------------ */
+@media screen and (min-width: 1024px) {
+  /* Main Grid */
+  .main-grid {
+    width: 860px;
+    height: 860px;
+    padding: 20px;
+  }
+
+  .cards {
+    width: 195px;
+    height: 195px;
+  }
+}
+
+/* INTERACTION */
+/* ------------------------ */
+.hidden {
+  display: none;
+}
+
